@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RY Games</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function makeInput(i){
+            if(i=="HR"){
+                document.getElementById("dis").
+       innerHTML = '<object type="text/html" data="HRindex.html" width="1098px" height="600px" style="margin-top: 70px;"></object>';
+
+            }else if(i=="TTT"){
+                document.getElementById("dis").
+       innerHTML = '<object type="text/html" data="TTTindex.html" width="1098px" height="600px" style="margin-top: 70px;"></object>';
+
+            }
+            else if(i=='W'){
+                document.getElementById("dis").
+       innerHTML = '<object type="text/html" data="Windex.html" width="1098px" height="800px" style="margin-top: 70px;"></object>';
+
+            }
+            else {
+                document.getElementById("dis").
+       innerHTML = '<object type="text/html" data="login.html" width="1098px" height="600px" style="margin-top: 70px;"></object>';
+
+
+            }
+    for(let i=1; i<=nume; i++){
+    document.getElementById("blank").
+       innerHTML += " <label><b>Enter Number "+i+":</b></label><input type='text' id='val_"+i+"'><br>";
+   }
+  }
+    </script>
+</head>
+
+<body>    
+    <input type="checkbox" id="menu">
+        <nav> <label>RY Gaming</label>
+            <ul>
+                <li><a href="login.html">LogIn</a></li>
+            </ul> <label for="menu" class="menu-bar"> <i class="fa fa-bars"></i> </label>
+        </nav>
+        <div class="side-menu">
+            <center> <img src="logo.png"> <br><br>
+                <h2>RY Gaming</h2>
+            </center> 
+            <br> 
+            <a onclick="makeInput('HR')"><span>HelpRishi-Maze</span></a> 
+            <a onclick="makeInput('TTT')"><span>Tic-Tca-To</span></a> 
+            <a onclick="makeInput('W')""><span>Wordled</span></a>
+            <a onclick="makeInput('l')"" class="LogIn"><span>LogIn</span></a>
+        </div>
+        <div class="data" id="dis">
+            <object type="text/html" data="HRindex.html" width="1098px" height="600px" style="margin-top: 70px;">
+            </object>
+        </div>
+</body>
+</html>

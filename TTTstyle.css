@@ -1,0 +1,152 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Send+Flowers&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+
+nav{
+    background-color: purple;
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0px 620px;
+    /* font-family: 'Send Flowers', cursive; */
+    /* font-family: 'Lavishly Yours', cursive; */
+    /* font-family: 'Patrick Hand', cursive; */
+    font-family: 'Grape Nuts', cursive;
+}
+nav ul{
+    list-style-type: none;
+    align-content: center;
+    align-items: center;
+
+}
+
+.gameContainer{
+  
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #mbody{
+    background-image: url('excited.gif');
+} */
+
+.info{
+    font-size: 22px;
+}
+.container{
+    /* used to make grid of 3 X 3 */
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Grape Nuts', cursive;
+    position: relative;
+}
+
+.box{
+    /* for making the grid with black border */
+    border: 2px solid black;
+    font-size: 8vw;  /*for Responsiveness and to put the X in the particular box*/ 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(220, 216, 223);
+}
+
+.gameInfo{
+    padding: 0 34px;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+/* .imgbox{ */
+    /* height:549.8em; */
+    /* width: 1000px; */
+/* } */
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    /* height:549.8em; */
+    /* width: 800px; */
+}
+
+/*utility classes for make removing side borders*/
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+/* Styling Button */
+#reset{
+    margin-left: 250px;
+    padding: 1px 18px;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Monotype Corsiva;
+    font-size: 25px;
+    font-weight: bolder;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.line{
+    background-color: red;
+    height: 3px;
+    width: 0vw;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+#gradient {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(128deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+  }
+  
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+/* #contents{width:90%} */
+}
